@@ -15,11 +15,11 @@ if (isset($_REQUEST['username'])) {
                      VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        header("Location: /filmlane-master/sign-in.html");
+        header("Location: ../html/sign-in.html");
     } else {
         echo "<div class='form'>
                   <h3>Required fields are missing.</h3><br/>
-                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                  <p class='link'>Click here to <a href='../html/sign-up.html'>registration</a> again.</p>
                   </div>";
     }
 } else {

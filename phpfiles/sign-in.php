@@ -2,7 +2,7 @@
 include('db.php');
 session_start();
 // When form submitted, check and create user session.
-if (isset($_POST['username'])) {
+if (isset($_REQUEST['username'])) {
     $username = stripslashes($_REQUEST['username']); // removes backslashes
     $username = mysqli_real_escape_string($conn, $username);
     $password = stripslashes($_REQUEST['password']);
@@ -10,19 +10,20 @@ if (isset($_POST['username'])) {
     // Check user is exist in the database
     $query = "SELECT * FROM `users` WHERE username='$username'
                      AND password='" . md5($password) . "'";
-    $result = mysqli_query($conn, $query) or die(mysqli_error());
+    $result = mysqli_query($conn, $query);
     $rows = mysqli_num_rows($result);
+    echo "total" . $rows;
     if ($rows == 1) {
         $_SESSION['username'] = $username;
-        $_SESSION['password'] = md5($password);        
-        // Redirect to user dashboard page 
-        header("Location: dashboard.html");
+        $_SESSION['password'] = $password;
+        // Redirect to user dashboard page
+        header("Location: ../html/index.html");
     } else {
         echo "<div class='form'>
                   <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+                  <p class='link'>Click here to <a href='../html/sign-in.html'>Login</a> again.</p>
                   </div>";
     }
 } else {
-    include('login.html');
+    include('sign-in.html');
 }
