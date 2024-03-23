@@ -1,1 +1,1 @@
-# Movies Review System (Frame Score)
+# Review System (Frame Score)
