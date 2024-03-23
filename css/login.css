@@ -22,7 +22,6 @@ body {
     background-color: #1D1F20;
     position: relative;
     top: 20%;
-    margin-top: 100px;
     margin: auto;
     width: 340px;
     height: 480px;
@@ -168,7 +167,7 @@ input[type=submit] {
 
 .register {
     margin: auto;
-    padding: 16px 0;
+    padding: 16px ;
     text-align: center;
     margin-top: 40px;
     width: 85%;
@@ -189,4 +188,4 @@ input[type=submit] {
     cursor: pointer;
     border-radius: 3px;
 }
-Footer
+

@@ -3,65 +3,260 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Review Website</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Frame Score - Ratings, Reviews, and Where to Watch the Best Movies & TV Shows</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body id="top">
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
         <div class="container">
-            <a class="navbar-brand" href="#">Movie Reviews</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
-                    <!-- Add more navigation links as needed -->
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Movie Poster">
-                    <div class="card-body">
-                        <h2 class="card-title">Movie Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary">Read Review</a>
-                    </div>
+            <div class="overlay" data-overlay></div>
+
+            <!-- <a href="./index.html" class="logo">
+        <img src="..\assets\images\logo.svg" alt="Filmlane logo">
+      </a>-->
+
+            <div class="header-actions">
+
+                <button class="search-btn">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <div class="lang-wrapper">
+                    <label for="language">
+                        <ion-icon name="globe-outline"></ion-icon>
+                    </label>
+
+                    <select name="language" id="language">
+                        <option value="en">EN</option>
+                        <option value="au">AU</option>
+                        <option value="ar">AR</option>
+                        <option value="tu">TU</option>
+                    </select>
                 </div>
-            </div>
-            <!-- Add more cards for other movies -->
-        </div>
-    </div>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>Contact us at example@example.com</p>
+                <a href="sign-in.html"><button class="btn btn-primary">Sign in</button></a>
+
+            </div>
+
+            <button class="menu-open-btn" data-menu-open-btn>
+                <ion-icon name="reorder-two"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+
+                    <a href="./index.html" class="logo">
+                        <img src="../assets/images/logo.svg" alt="Filmlane logo">
+                    </a>
+
+                    <button class="menu-close-btn" data-menu-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="./index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="./movies.html" class="navbar-link">Movies</a>
+                    </li>
+
+                    <li>
+                        <a href="./tvshows.html" class="navbar-link">TV Shows</a>
+                    </li>
+
+                    <li>
+                        <a href="./aboutus.html" class="navbar-link">About Us</a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-social-list">
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
         </div>
+    </header>
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <!-- <a href="./index.html" class="logo">
+                        <img src="../assets/images/logo.svg" alt="Filmlane logo">
+                    </a> -->
+
+
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="quicklink-wrapper">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="#" class="quicklink-link">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+                </p>
+
+                <img src="../assets/images/footer-bottom-img.png" alt="Online banking companies logo"
+                    class="footer-bottom-img">
+
+            </div>
+        </div>
+
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+
+
+
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="../js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
