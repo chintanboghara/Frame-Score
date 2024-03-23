@@ -1,0 +1,61 @@
+/* Custom CSS styles */
+
+/* Body */
+body {
+    background-color: #121212; /* Darker background */
+    color: #ffffff; /* White */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000000; /* Black */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.navbar .navbar-brand {
+    color: #ffffff; /* White */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff; /* White */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #cccccc; /* Light grey */
+}
+
+/* Active link */
+.navbar .navbar-nav .nav-item.active .nav-link {
+    color: #ffffff; /* White */
+}
+
+/* Main Content */
+.container {
+    background-color: #0d0d0d; /* Darker background */
+    border-radius: 10px; /* Rounded corners */
+    color: #ffffff; /* White */
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    background-color: #1a1a1a; /* Darker background */
+    color: #ffffff; /* White */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.1); /* Add shadow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black */
+    color: #ffffff; /* White */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Paragraph text */
+p {
+    color: #ffffff; /* White */
+}
