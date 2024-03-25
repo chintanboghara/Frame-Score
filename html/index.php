@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +60,15 @@
           </select>
         </div>
 
-        <a href="sign-in.html"><button class="btn btn-primary">Sign in</button></a>
+        <?php if (isset($_SESSION['username'])) {
+        ?><a href="../php/logout.php" onclick="return confirm('Are you sure you want to log out?');"><button class="btn btn-primary" >log out</button></a>
+          <div><button class="btn btn-primary"><?= $_SESSION['username'] ?></button></div>
+        <?php } else { ?>
+          <a href="../html/sign-in.html"><button class="btn btn-primary">Sign in</button></a>
+        <?php } ?>
+
+
+
 
       </div>
 
@@ -281,8 +290,7 @@
 
                 <a href="./movie-details.html">
                   <figure class="card-banner">
-                    <img src="../assets/images/upcoming-2.png"
-                      alt="Doctor Strange in the Multiverse of Madness movie poster">
+                    <img src="../assets/images/upcoming-2.png" alt="Doctor Strange in the Multiverse of Madness movie poster">
                   </figure>
                 </a>
 
@@ -354,8 +362,7 @@
 
                 <a href="./movie-details.html">
                   <figure class="card-banner">
-                    <img src="../assets/images/upcoming-4.png"
-                      alt="The Unbearable Weight of Massive Talent movie poster">
+                    <img src="../assets/images/upcoming-4.png" alt="The Unbearable Weight of Massive Talent movie poster">
                   </figure>
                 </a>
 
@@ -1035,9 +1042,9 @@
               <a href="#" class="footer-link">Web Series</a>
             </li>
 
-            <li>
+            <!-- <li>
               <a href="#" class="footer-link">Pricing</a>
-            </li>
+            </li> -->
 
           </ul>
 
@@ -1100,7 +1107,7 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <!-- <div class="footer-bottom">
       <div class="container">
 
         <p class="copyright">
@@ -1110,7 +1117,7 @@
         <img src="../assets/images/footer-bottom-img.png" alt="Online banking companies logo" class="footer-bottom-img">
 
       </div>
-    </div>
+    </div> -->
 
   </footer>
 
